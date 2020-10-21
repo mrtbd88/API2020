@@ -1,0 +1,25 @@
+
+POST /landlords
+ TC1: firstName as null should return 400
+ TC2: lastName as null should return 400
+ TC3: firstName as int should return 400
+ TC4: lastName as int should return 400
+ TC5: firstName property as firstname should return 400
+ TC6: lastName property as lastname should return 400
+ TC7: having spechal char such as @##$% in firstName should return 400
+ TC8: having spechal char such as @##$% in lastName should return 400
+ TC9-10: having space in firstName/lastName (hasan bhuiyan) should return 400
+ TC11: adding extra property in the payload should return 400
+ TC12: firstName with 2 char - 400 (lower boundary)
+ TC13: firstName with 3 char - 200 ok
+ TC14: firstName with 11 char - 400 (upper boundary)
+ TC15: lastName with 2 char - 400
+ TC16: lastName with 3 char - 200 ok
+ TC17: lastName with 11 char - 400
+ TC18: different HTTP call should return 405
+ TC19: send payload as xml format should return 415
+ TC20: send valid firstName and lastName should return 200
+ TC21: invalid endpoint should return 405
+
+
+
